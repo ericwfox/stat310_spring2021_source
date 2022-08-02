@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumerate}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+Lecture 5: Normal Distribution\\
+Practice Problems\\
+STAT 310, Spring 2021\\
+
+\textbf{Exercise 1}.  Suppose $Z \sim N(\mu = 0, \sigma = 1)$ is a random variable following a standard normal distribution.  Use the R function \texttt{pnorm()} to compute the following probabilities:
+\begin{enumerate}[(a)]
+\item $P(Z < 1.4)$\\
+
+\includegraphics[scale=0.5]{figure/norm_draw.pdf}
+\bigskip
+
+\item $P(Z > 2.2)$
+
+\includegraphics[scale=0.5]{figure/norm_draw.pdf}
+\bigskip
+
+\item $P(-0.5 < Z < 1.5)$
+
+\includegraphics[scale=0.5]{figure/norm_draw.pdf}
+\bigskip
+\end{enumerate}
+
+\textbf{Exercise 2}.  Use the R function \texttt{qnorm()} to find $85^{th}$ percentile of the standard normal distribution $N(\mu = 0, \sigma = 1)$.\\
+
+\includegraphics[scale=0.5]{figure/norm_draw.pdf}
+\bigskip
+
+\newpage
+
+\textbf{Exercise 3}.  The SAT score $X$ closely follows a normal distribution with mean $\mu=1100$ and standard deviation $\sigma = 200$.  That is, $X \sim N(\mu = 1100, \sigma = 200)$
+\begin{enumerate}[(a)]
+\item About what percent of test takers score below a 750?\\
+\includegraphics[scale=0.6]{figure/norm_draw.pdf}
+\vspace{1cm}
+
+\item About what percent of test takers score above a 1500?\\
+\includegraphics[scale=0.6]{figure/norm_draw.pdf}
+\vspace{1cm}
+
+\item About what percent of test takes score between 800 and 1400?\\
+\includegraphics[scale=0.6]{figure/norm_draw.pdf}
+\vspace{2cm}
+
+\item What is the 95$^{th}$ percentile for SAT scores?\\
+\includegraphics[scale=0.6]{figure/norm_draw.pdf}
+
+\end{enumerate}
+
+\end{document}

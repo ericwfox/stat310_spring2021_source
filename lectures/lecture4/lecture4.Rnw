@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumerate}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\begin{center}
+\large
+\textbf{Lecture 4: Contingency Tables}\\
+\normalsize
+\textbf{STAT 310, Spring 2021}\\
+\hrulefill
+\end{center}
+
+A \textbf{contingency table} summarizes data for two categorical variables.  Each value in the table represents the number of times a particular combination of variable outcomes occurred.  For example, here is a contingency table between the variables \texttt{PhysActive} and \texttt{HealthGen}:
+
+<<>>=
+nhanes <- readRDS(url("https://ericwfox.github.io/data/nhanes.rds"))
+table(nhanes$PhysActive, nhanes$HealthGen)
+@
+
+We can use the \texttt{addmargins()} function to add the row and column totals:
+<<>>=
+addmargins(table(nhanes$PhysActive, nhanes$HealthGen))
+@
+
+\textbf{In-Class Exercise}:
+\begin{enumerate}[(a)]
+\item What proportion of participants reported being in excellent health?
+\vspace{1cm}
+\item What proportion of participants reported being physically active?
+\vspace{1cm}
+\item What proportion of participants are both physically active and reported being excellent health?
+\vspace{1cm}
+\item Of the participants who reported being in excellent health, what proportion are physically active?
+\vspace{1cm}
+\item  Of the participants who reported being in poor health, what proportion are physically active?
+\end{enumerate}
+
+\newpage
+
+Contingency tables can be visualized using \textbf{stacked} or \textbf{side-by-side bar plots}.
+\vspace{5pt}
+
+<<echo=F, fig.width=5, fig.height=2.5>>=
+library(ggplot2)
+ggplot(data = nhanes) +
+  geom_bar(aes(x=HealthGen, fill=PhysActive))
+@
+\vspace{10pt}
+
+<<echo=F, fig.width=5, fig.height=2.5>>=
+ggplot(data = nhanes) +
+  geom_bar(aes(x=HealthGen, fill=PhysActive), position = "dodge")
+@
+\vspace{10pt}
+
+<<echo=F, fig.width=5, fig.height=2.5>>=
+ggplot(data = nhanes) +
+  geom_bar(aes(x=HealthGen, fill=PhysActive), position = "fill") +
+  ylab("proportion")
+@
+
+\end{document}

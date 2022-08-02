@@ -1,0 +1,83 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumerate}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+Exam 3 Practice Problems\\
+STAT 310, Spring 2021\\
+
+\textbf{Exercise 1}.  The following scatterplot shows the association between price (in \$1,000's) and mileage (number of miles driven in 1,000's) for a sample of 30 used Honda Accords in 2017.  Also provided below is the output from fitting a simple linear regression model in R.\\
+
+\includegraphics[scale=0.4]{figure/scatter_cars.pdf}
+
+\begin{verbatim}
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  20.8096     0.9529   21.84  < 2e-16 ***
+Mileage      -0.1198     0.0141   -8.50 3.06e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 
+\end{verbatim}
+
+\medskip
+
+\begin{enumerate}[(a)]
+\item Do the data provide strong evidence of a linear association between the price of the used cars and the number of miles driven, i.e., is the slope of the regression line significantly different than 0? State the null and alternative hypothesis, report the test statistic and $p$-value, and state your conclusion. 
+\vspace{3cm}
+\item Calculate a 95\% confidence interval for the slope parameter $\beta_1$.
+\vspace{4cm}
+\item Do the results from the hypothesis test and confidence interval agree?  Explain.
+\end{enumerate}
+
+\newpage
+
+% \textbf{Exercise 2}.  It is claimed that people get an average of 8 hours of sleep each night.  Suppose we want to conduct a hypothesis test to determine whether the average amount of sleep that CSUEB students get is significantly different than 8 hours.  Explain what is wrong with the following null and alternative hypothesis. \\
+% 
+% $H_0: \bar{x} = 8$\\
+% $H_A: \bar{x} \neq 8$\\
+
+<<echo = F, eval = F>>=
+set.seed(999)
+x <- rnorm(25, mean = 8, sd = 1.5)
+summary(x)
+pdf("figure/boxplot_sleep.pdf", width = 4, height = 2)
+par(mar = c(4.5, 2, 2, 2))
+boxplot(x, horizontal = TRUE, xlab = "Hours of Sleep")
+dev.off()
+@
+
+
+\textbf{Exercise 2}.  A social worker at a local high school is interested in testing whether the average amount of sleep students get is significantly different than 8 hours, which is considered healthy. A random sample of $n=25$ students are interviewed.  The sample mean $\bar{x}=7.6$ and standard deviation $s=1.4$.  A boxplot of the data is also shown below.
+
+\includegraphics[scale = 0.6]{figure/boxplot_sleep.pdf}
+
+\begin{enumerate}[(a)]
+\item Which of the following is the correct null and alternative hypothesis for a two-sided test?
+\begin{enumerate}[(i)]
+\item $H_0: \bar{x} = 8$, $H_A: \bar{x} \neq 8$
+\item $H_0: \mu = 8$, $H_A: \mu \neq 8$
+\item $H_0: \bar{x} = 8.2$, $H_A: \bar{x} \neq 8.2$\\
+\end{enumerate}
+
+\item Check the conditions for the hypothesis test.
+\vspace{3cm}
+
+\item Calculate the test statistic.
+\vspace{3cm}
+
+\item Calculate the $p$-value and make a decision using $\alpha=0.05$.
+\vspace{3cm}
+
+\item What is the conclusion of the test in the context of the data?
+\end{enumerate}
+
+% \textbf{Exercise 3}.  In general, what are the conditions for performing a hypothesis test, or constructing a confidence interval, for one population mean $\mu$?
+
+
+\end{document}
