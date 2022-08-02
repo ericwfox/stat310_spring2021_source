@@ -1,0 +1,45 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{url}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\textbf{STAT 310, HW 4}\\
+\textbf{Due:} Thursday, March 11\\
+
+\textbf{Reading:}  Section 5.1 from \emph{OpenIntro}\\
+
+\textbf{Directions:} Please submit your completed assignment to Blackboard.  Your answers can either be typed using Word, or handwritten and then scanned.  The best format for submission is PDF.  Please convert your Word document or scan to a PDF.\\
+
+\textbf{Exercise 1}.  The General Social Survey (GSS) is a major sociological survey on American demographics, and views on social and cultural issues.\footnote{url{https://en.wikipedia.org/wiki/General\_Social\_Survey}} One question on the 2002 survey asked participants whether or not they believe in an afterlife.  Of the 1211 Americans that were randomly sampled to participate in the survey, 975 said that they believe in an afterlife.
+\begin{enumerate}[(a)]
+\item What is the sample proportion?
+\item What is the sample size?
+\item Describe the population proportion that is being estimated in this survey?
+\item Suppose the same question about the afterlife was asked in a more recent survey, with a different random sample of Americans.  Would you expect the sample proportion that believe in an afterlife to be the same, or slightly different?\\
+\end{enumerate}
+ 
+\textbf{Exercise 2}. It is claimed that the population proportion of people that are left handed is $p=0.1$.  Suppose we take a random sample of $n=200$ people.
+\begin{enumerate}[(a)]
+\item What is the mean, or center, of the sampling distribution for $\hat{p}$?
+\item What is the standard error of the sampling distribution for $\hat{p}$?
+\item What distribution does $\hat{p}$ follow?
+\item Are the conditions for the Central Limit Theorem satisfied?\\
+\end{enumerate}
+
+\textbf{Exercise 3}.  It is claimed that the population proportion of people that are left handed is $p=0.1$.  Suppose we take a random sample of $n=200$ people.
+\begin{enumerate}[(a)]
+\item What is the probability that the sample proportion $\hat{p}$ will be less than 0.08 (that is, what is probability of obtaining a sample where less that 8\% of the people are left handed)?
+\item What is the probability that sample proportion $\hat{p}$ will be between 0.09 and 0.11 (that is, within 1\% of the population proportion)?
+\end{enumerate}
+
+
+
+
+\end{document}

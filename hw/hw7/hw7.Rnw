@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fullpage}
+\usepackage{enumerate}
+\usepackage{url}
+
+\begin{document}
+\setlength\parindent{0pt}
+
+\textbf{STAT 310, HW 7}\\
+\textbf{Due:} Thursday, April 15\\
+
+\textbf{Reading:}  Section 7.1 from \emph{OpenIntro}\\
+
+\textbf{Directions:} Please submit your completed assignment to Blackboard.  Your answers can either be typed using Word, or handwritten and then scanned.  The best format for submission is PDF.  Please convert your Word document or scan to a PDF.\\
+
+% \textbf{Exercise 1}.  Below are some summary statistics for the finishing times (in minutes) for a random sample 100 participants in the 2017 Cherry Blossom Race.  Calculate and interpret a 95\% confidence interval for the population mean finishing time for this race. 
+% \begin{table}[ht]
+% \begin{tabular}{lll}
+% \hline
+% n & $\bar{x}$ & s\\
+% \hline
+% 100 & 97.32 & 16.98
+% \end{tabular}
+% \end{table}
+
+\textbf{Exercise 1}.  Below are some summary statistics and a box plot of the heights for a random sample of $n=20$ male U.S. adults.  Calculate and interpret a 95\% confidence interval for the population mean height for men in the U.S.  Also comment on whether the conditions for the interval appear satisfied.
+\begin{table}[ht]
+\begin{tabular}{lllll}
+\hline
+n & $\bar{x}$ & s & min & max\\
+\hline
+20 & 68.86 & 2.35 & 63.35 & 73.58\\
+\end{tabular}
+\end{table}
+
+\smallskip
+
+\includegraphics[scale=0.75]{boxplot_height.pdf}
+\bigskip
+
+\textbf{Exercise 2}.  Calculate the critical value $t^*$ for the given sample size and confidence level.
+\begin{enumerate}[(a)]
+\item $n=6$, CL$=90\%$
+\item $n=12$, CL$=99\%$\\
+\end{enumerate}
+
+\textbf{Exercise 3}.  Advertisements claim that the average nicotine content of a certain kind of cigarette is only 0.30 milligram.  Suspecting that the average nicotine content is actually higher than what is claimed, the health department takes a random sample of 121 of those cigarettes from different production lots.  They find that the sample mean is $\bar{x} = 0.33$ with a standard deviation of $s=0.15$.
+\begin{enumerate}[(a)]
+\item Write the null and alternative hypotheses for a one-sided test.  
+\item Are the conditions for the test satisfied?
+\item Calculate the test statistic.
+\item Calculate the $p$-value and make a decision using $\alpha = 0.05$ significance level.  
+\item What is the conclusion of the test in the context of the data?\\
+\end{enumerate}
+
+\textbf{Exercise 4}.  Find the $p$-value for the given t-test statistic and sample size.  Also determine if the null hypothesis would be rejected at $\alpha = 0.05$.  Assume that all the conditions for the hypothesis test are satisfied.
+\begin{enumerate}[(a)]
+\item $H_A: \mu < \mu_0$, $n=25$, $t=-1.2$
+\item $H_A: \mu > \mu_0$, $n=50$, $t=1.9$
+\item $H_A: \mu \neq \mu_0$, n=10, $t=3.5$
+\end{enumerate}
+
+
+\end{document}
+
